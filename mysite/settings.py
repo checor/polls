@@ -82,8 +82,6 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Install PyMySQL as mysqlclient/MySQLdb to use Django's mysqlclient adapter
 # See https://docs.djangoproject.com/en/2.1/ref/databases/#mysql-db-api-drivers
 # for more information
-import pymysql  # noqa: 402
-pymysql.install_as_MySQLdb()
 
 # [START db_setup]
 DATABASES = {
@@ -91,7 +89,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'HOST': '/opt/bitnami/postgresql',
         'USER': 'bitnami',
-        'PASSWORD': 'pass',
+        'PASSWORD': 'f03511c502',
         'NAME': 'djangostack',
         'POST': '5432',
     }
