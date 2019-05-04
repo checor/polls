@@ -8,6 +8,10 @@ https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/
 """
 
 import os
+import sys
+sys.path.append('/opt/bitnami/apps/django/django_projects/polls')
+os.environ.setdefault("PYTHON_EGG_CACHE", "/opt/bitnami/apps/django/django_projects/polls/egg_cache")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "polls.settings")
 
 from django.core.wsgi import get_wsgi_application
 
